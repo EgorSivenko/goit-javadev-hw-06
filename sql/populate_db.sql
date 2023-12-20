@@ -36,7 +36,7 @@ VALUES  (3, '2017-02-16', '2021-10-02'),
         (6, '2018-02-12', '2020-11-17'),
         (5, '2017-05-19', '2022-06-01');
         
-INSERT INTO project_workers
+INSERT INTO project_workers (project_id, worker_id)
 VALUES  (1, 3), (1, 5), (1, 6),
         (2, 2), (2, 4),
         (3, 1),
