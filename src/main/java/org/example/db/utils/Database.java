@@ -1,11 +1,14 @@
 package org.example.db.utils;
 
+import lombok.Getter;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 import static org.example.db.utils.DbConstants.*;
 
+@Getter
 public class Database {
     private static final Database database = new Database();
     private final Connection connection;
@@ -22,7 +25,4 @@ public class Database {
         return database;
     }
 
-    public Connection getConnection() {
-        return connection;
-    }
 }
