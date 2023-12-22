@@ -38,13 +38,20 @@ public class SqlScriptExecutor {
         return sqlStatements;
     }
 
-    public static void executeSqlStatements(List<String> sqlStatements, Connection connection) {
+    public static void executeSqlStatements(List<String> sqlStatements, Connection connection) throws SQLException {
+        connection.setAutoCommit(false);
+
         try (Statement statement = connection.createStatement()) {
-            for (String sqlStatement : sqlStatements) {
-                statement.execute(sqlStatement);
+            for (String sql : sqlStatements) {
+                statement.addBatch(sql);
             }
+            statement.executeBatch();
+
+            connection.commit();
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            connection.rollback();
+        } finally {
+            connection.setAutoCommit(true);
         }
     }
 }
