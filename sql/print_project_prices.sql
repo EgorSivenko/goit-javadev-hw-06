@@ -1,5 +1,3 @@
-USE mega_soft;
-
 SELECT
     project_id,
     SUM(salary) * TIMESTAMPDIFF(MONTH, start_date, finish_date) AS project_price

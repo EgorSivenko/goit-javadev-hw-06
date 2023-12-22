@@ -4,9 +4,9 @@ import lombok.experimental.UtilityClass;
 
 @UtilityClass
 public class DbConstants {
-    public static final String URL = "jdbc:mysql://127.0.0.1:3306";
-    public static final String USER = "root";
-    public static final String PASSWORD = "strong_password";
+    public static final String DB_URL = "jdbc:mysql://127.0.0.1:3306/mega_soft";
+    public static final String DB_USER = "root";
+    public static final String DB_PASSWORD = "strong_password";
 
     public static final String INIT_DB_FILE_PATH = "sql/init_db.sql";
     public static final String POPULATE_DB_FILE_PATH = "sql/populate_db.sql";

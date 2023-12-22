@@ -1,5 +1,3 @@
-USE mega_soft;
-
 SELECT
     project_id,
     TIMESTAMPDIFF(MONTH, start_date, finish_date) AS month_count

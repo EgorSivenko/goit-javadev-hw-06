@@ -1,5 +1,3 @@
-USE mega_soft;
-
 SELECT
     'Youngest' AS type,
     worker_name,

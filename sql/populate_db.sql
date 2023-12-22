@@ -1,5 +1,3 @@
-USE mega_soft;
-
 INSERT INTO workers (worker_name, birthday, level, salary)
 VALUES  ('Kent Beatty', '1986-09-15', 'Junior', 1234), 
         ('Holly Dooley', '1984-01-17', 'Middle', 4572),

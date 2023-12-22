@@ -1,5 +1,3 @@
-USE mega_soft;
-
 SELECT
     client_name,
     COUNT(client_id) AS project_count
